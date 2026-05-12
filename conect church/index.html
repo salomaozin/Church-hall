@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Church Hall </title>
+<script src="script.js"></script>
+<body>
+<header>Church Hall </header>
+</head>
+
+<div class="layout">
+<div class="sidebar">
+<button onclick="mostrar('auth')">Login</button>
+<button onclick="mostrar('home')">Página Inicial</button>
+<button onclick="mostrar('pregadores')">Pregadores</button>
+<button onclick="mostrar('bandas')">Bandas</button>
+<button onclick="mostrar('chatBox')">Chat</button>
+<button onclick="mostrar('historicoBox')">Histórico</button>
+</div>
+
+<div class="main">
+
+<div id="auth" class="card">
+<h2>Cadastro</h2>
+<select id="tipo">
+<option value="igreja">Igreja</option>
+<option value="pregador">Pregador</option>
+<option value="banda">Banda</option>
+</select>
+<input id="nome" placeholder="Nome">
+<input id="cpf" placeholder="CPF">
+<input id="email" placeholder="Email">
+<input id="data de nascimento" placeholder="data de nascimento">
+<input id="senha" type="password" placeholder="Senha">
+<input id="instagram" placeholder="Instagram (link)">
+<input id="youtube" placeholder="YouTube (link)">
+<button onclick="registrar()">Criar conta</button>
+
+<h3>Login</h3>
+<input id="emailLogin" placeholder="Email">
+<input id="senhaLogin" type="password" placeholder="Senha">
+<button onclick="login()">Entrar</button>
+<div id="userInfo"></div>
+</div>
+
+<div id="dashboard" class="card" style="display:none">
+<h2>Dashboard</h2>
+<div id="stats"></div>
+</div>
+<div id="home" class="card" style="display:none">
+<h2>🔥 Destaques</h2>
+
+<div id="cardsHome"></div>
+</div>
+
+<div id="pregadores" class="card" style="display:none">
+<h2>Pregadores</h2>
+<input id="cidade" placeholder="Digite sua cidade..." list="cidades-br">
+<input id="pNome" placeholder="Nome">
+
+<input id="valor" placeholder="Valor">
+<button onclick="salvarPregador()">Cadastrar</button>
+<div id="listaPregadores"></div>
+</div>
+
+<div id="bandas" class="card" style="display:none">
+<h2>Bandas</h2>
+<input id="bNome" placeholder="Nome da banda">
+<input id="bCidade" list="cidades" placeholder="Cidade">
+<input id="bValor" placeholder="Valor">
+<input id="integrantes" placeholder="Integrantes">
+<input id="instrumentos" placeholder="Instrumentos">
+<input id="agenda" placeholder="Agenda">
+<button onclick="salvarBanda()">Cadastrar</button>
+<div id="listaBandas"></div>
+</div>
+
+<div id="chatBox" class="card" style="display:none">
+<h2>Chat</h2>
+<div id="chat" class="chat"></div>
+<input id="msg" placeholder="Mensagem">
+<button onclick="enviarMsg()">Enviar</button>
+</div>
+
+<div id="historicoBox" class="card" style="display:none">
+<h2>Histórico</h2>
+<div id="historico"></div>
+</div>
+
+</div>
+</div>
+</body>
+<footer>
+    <p>&copy; 2026 Bryan do grau - Todos os direitos reservados.</p>
+    <ul>
+        
+    </ul>
+</footer>
+
+</html>
